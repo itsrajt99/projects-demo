@@ -1,0 +1,88 @@
+.app{
+    background: #055f8800;
+}
+.app-card{
+    background-color: #0f5c8000;
+    max-width: 400px;
+    min-width: 375px;
+    border-radius: 8px;
+}
+.flex-centre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+header{
+    font-size: 35px;
+    color: #091f43;
+    padding: 16px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+input{
+    width: 90%;
+    margin-top: 10px;
+    margin-left: 15px;
+    text-align: center;
+    padding: 16px;
+    height: 55px;
+    outline: none;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+}
+button{
+    width: 90%;
+    margin-left: 15px;
+    margin-right: 10px;
+    padding: 15px;
+    background: #c56626f5;
+    outline: none;
+    border-radius: 10px;
+    border: 1px soild #ccc;
+    font: 16px;
+}
+.success-msg{
+    color: #155724;
+    background: #d4edda;
+    border-radius: 5px;
+    padding: 12px;
+    margin: 12px;
+}
+.error-msg{
+    color: #721c24;
+    background: #d4edda;
+    border-radius: 5px;
+    padding: 12px;
+    margin: 12px;
+}
+.text-centre{
+    text-align: center;
+}
+.temprature{
+    font-size: 60px;
+    font-weight: 700;
+    line-height: normal;
+}
+.description,.location{
+    font-size: 24px;
+    line-height: 32px;
+}
+footer{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+.feels_like{
+    width: 100%;
+    padding: 16px;
+    font-size: 14px;
+}
+.humidity{
+    border-left: 1px solid #ccc;
+    width: 100%;
+    padding: 16px;
+    font-size: 14px;
+}

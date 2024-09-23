@@ -1,0 +1,54 @@
+<!-- sldsValidatorIgnore -->
+<!-- sldsValidatorIgnore -->
+<template>
+    <div class="app flex-centre">
+        <lightning-card>
+        <div class="app-card">
+          <header>
+            <h1>Weather App</h1>
+          </header>
+          <template if:true={loadingText}>
+          <div class={loadingClasses}>{loadingText}</div>
+        </template>
+        <template if:false={response}>
+          <section>
+            <form onsubmit={submitHandler}>
+                <input type="text" placeholder="Enter City Name" required spellcheck="false" 
+                onkeyup={searchHandler}/>
+                <button type="submit" class="slds-m-top_large">Search</button>
+            </form>
+          </section>
+        </template>
+        <template if:true={response}>
+          <section class="slds-m-around_large text-centre">
+            <img src="https://cdn-icons-png.freepik.com/256/15059/15059208.png?ga=GA1.1.1688729586.1689142081&semt=ais_hybrid" height="100px" width="100px">
+            <div class="temprature">
+                <span>{response.temperature}</span>
+                <span>°</span>
+            </div>
+            <div class="description">{response.description}</div>
+            <div class="location"></div>
+            <img src="https://cdn-icons-png.freepik.com/256/5174/5174778.png?ga=GA1.1.1688729586.1689142081&semt=ais_hybrid" height="30px" width="30px">
+            <span>{response.location}</span>
+          </section>
+          <footer>
+            <div class="feels_like">
+                <div>
+                    <!-- <img src="https://cdn-icons-png.freepik.com/256/1779/1779878.png?semt=ais_hybrid"  height="35px" width="35px"> -->
+                    <div>{response.feels_like}°</div>
+                    <p>Feels Like</p>
+                </div>
+            </div>
+            <div class="humidity"> 
+                <div>
+                  <!-- <img src="https://cdn-icons-png.freepik.com/256/16205/16205576.png?ga=GA1.1.1688729586.1689142081&semt=ais_hybrid" height="35px" width="350px" > -->
+                    <div>{response.humidity}</div>
+                </div> 
+                <p>Humidity</p>  
+            </div>
+          </footer>
+        </template>
+        </div>
+    </lightning-card>
+    </div>
+</template>
