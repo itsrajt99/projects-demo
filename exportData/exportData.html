@@ -1,0 +1,13 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <div>
+        <lightning-button label="Export Data" title="Download actionExport Data Into csv" 
+        icon-name="utility:download" onclick={clickHandler} disabled={checkRecord}></lightning-button>
+    <!-- sldsValidatorIgnoreNextLine -->
+    </div>
+    <lightning-datatable
+    key-field="id"
+    data={accountData}
+    columns={columns}>
+</lightning-datatable>
+</template>
