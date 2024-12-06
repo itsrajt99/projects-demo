@@ -1,0 +1,46 @@
+<template>
+    <lightning-card title="BMI CALCULATOR">
+        <div class="app">
+            <div class="box">
+                <h1>BMI Calculator</h1>
+                <template if:true={result}>
+                <section>
+                    <div>Your BMI Value is: </div>
+                    <div>Here value will come: {bmiValue}</div>
+                    <div>So yu are:</div>
+                    <div>Your Result Is: {result}</div>
+                    <lightning-button label="Re-Confirm" class="fname" variant="brand" onclick={recalculate}>
+                       
+                    </lightning-button>
+                </section>
+            </template>
+                <template if:false={result}>
+                <form >
+                  <lightning-input  name="height" label="YOUR HEIGHT" class="fname" placeholder="Enter Your Height In CM"
+                  min="0" required value={height} onchange={inputHandler}></lightning-input>
+                  <lightning-input  name="weight" label="YOUR WEIGHT" class="fname" placeholder="Enter Your weight in K.G"
+                  min="0" required value={weight} onchange={inputHandler}></lightning-input>
+                  <lightning-button label="Confirm" class="fname" variant="brand"  onsubmit={submitHandler} >
+
+                  </lightning-button>
+                </form>
+            </template>
+        
+                <div class="info-wrapper">
+                 <h2 class="slds-text-color_error">WHAT YOUR BMI MEANS</h2>
+                 <p>Once you have measured your BMI, you can determine your healthy weight range.
+                    If your BMI is:
+                 </p>
+                 <h3 class="slds-text-color_error">UNDER 18.5</h3>
+                 <p>You are very under weight possibly malnourished.</p>
+                 <h3 class="slds-text-color_error">Between 18.5 to 24.9</h3>
+                 <p>You have a healthy weight range.</p>
+                 <h3 class="slds-text-color_error">25.0 to 25.9</h3>
+                 <p>You are over weight.</p>
+                 <h3 class="slds-text-color_error">OVER 30</h3>
+                 <p>You are Obses.</p>
+                </div>
+            </div>
+           </div>
+    </lightning-card>
+</template>
