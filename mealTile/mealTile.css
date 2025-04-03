@@ -1,0 +1,44 @@
+.card{
+max-width: 300px;
+margin: 20px auto;
+border-radius: 10px;
+overflow: hidden;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+transition: transform 0.2s ease-in-out;
+font-family: 'Times New Roman', Times, serif;
+
+}
+.card:hover{
+    transform: scale(1.05);
+}
+.meal-image{
+width: 100%;
+height: 200px;
+object-fit: cover;
+}
+.card-content{
+padding: 15px;
+background-color: #fff;
+text-align: center;
+}
+.header{
+ font-size: 23px;
+ margin-bottom: 10px;
+}
+.detail{
+color: #ff6f61;
+font-size: 20px;
+margin-bottom: 10px;
+}
+.receipe-button{
+ width: 100%;
+ padding: 10px;
+ background-color: #ff6f61;
+ color: white;
+ font-size: 18px;
+ cursor: pointer;
+ transition: background-color 0.2s ease-in-out;
+}
+.receipe-button:hover{
+    background-color: #4b3432;
+}
