@@ -1,4 +1,4 @@
-#The Src folder is of react js project
+# The Src folder is of react js project
 <br>
-The frontend of our meal app are store in src folder
+1.The frontend of our meal app are store in src folder
 
